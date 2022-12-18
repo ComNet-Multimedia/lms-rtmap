@@ -13,24 +13,11 @@ config = configparser.ConfigParser()
 config.read(config_file_path)
 
 # Pobieranie wartości z sekcji [database]
-host = config['database']['host']
-user = config['database']['user']
-password = config['database']['password']
-database = config['database']['database']
+db_host = config['database']['host']
+db_user = config['database']['user']
+db_password = config['database']['password']
+db_name = config['database']['database']
 
-# Wypisanie wartości na ekran
-print(f"host: {host}")
-print(f"user: {user}")
-print(f"password: {password}")
-print(f"database: {database}")
-
-
-
-# Config section
-db_host = "localhost"
-db_name = "lms"
-db_user = "lms"
-db_password = None
 queueid_list = [1000001, 2000026, 2000030, 2000042, 2000035, 2000031, 2000033]
 count=0
 countOld=0
