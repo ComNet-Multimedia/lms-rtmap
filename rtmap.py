@@ -3,21 +3,20 @@ import folium
 import time
 import configparser
 
-# Ustawienie domyślnej ścieżki do pliku konfiguracyjnego
+# Config section
+
+# lms.ini file
 config_file_path = '/etc/lms/lms.ini'
+# queues to show on map
+queueid_list = [1000001, 2000026, 2000030, 2000042, 2000035, 2000031, 2000033]
 
-# Tworzenie obiektu ConfigParser
+
 config = configparser.ConfigParser()
-
-# Wczytanie pliku konfiguracyjnego
 config.read(config_file_path)
-
-# Pobieranie wartości z sekcji [database]
 db_host = config['database']['host']
 db_user = config['database']['user']
 db_password = config['database']['password']
 db_name = config['database']['database']
-
 queueid_list = [1000001, 2000026, 2000030, 2000042, 2000035, 2000031, 2000033]
 count=0
 countOld=0
