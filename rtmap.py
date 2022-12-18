@@ -23,9 +23,9 @@ count=0
 countOld=0
 iteracja=0
 
-if db_host = "''":
+if db_host == "''":
     db_host = "localhost"
-    
+
 # DB connect
 conn = psycopg2.connect(host=db_host, dbname=db_name, user=db_user, password=db_password)
 
