@@ -77,7 +77,7 @@ while True:
                     color = 'blue'
 
                 # Tworzymy klikalny link z napisem "Zgłoszenie"
-                link = f'<b><a href="{lms_url}/?m=rtticketview&id={row[4]}">Idź do zgłoszenia</a></b>'
+                link = f'<b><a href="{lms_url}?m=rtticketview&id={row[4]}">Idź do zgłoszenia</a></b>'
                 popup_text = f"{link}<br>{row[2]}"  # dodaj klikalny link i nową linię
                 folium.Marker([row[0], row[1]], popup=popup_text, icon=folium.Icon(color=color)).add_to(map)
 
