@@ -9,6 +9,8 @@ import configparser
 config_file_path = '/etc/lms/lms.ini'
 # queues to show on map
 queueid_list = [1000001, 2000026, 2000030, 2000042, 2000035, 2000031, 2000033]
+# where to save map file
+map_file_path = '/var/www/html/lms/map.html'
 
 
 config = configparser.ConfigParser()
@@ -81,7 +83,7 @@ while True:
 
             # Generuję mapę
             print("Zmiana liczby zgłoszeń, robię nową mapę")
-            map.save("/var/www/html/lms/map.html")
+            map.save(map_file_path)
         countOld = count
 
     time.sleep(5)
