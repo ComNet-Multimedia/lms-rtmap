@@ -12,7 +12,7 @@ queueid_list = [1000001, 2000026, 2000030, 2000042, 2000035, 2000031, 2000033]
 # where to save map file
 map_file_path = '/var/www/html/lms/map.html'
 # LMS URL
-lms_url = 'https://lmsmm.w2s.net.pl/'
+lms_url = 'https://lms.firma.pl/'
 
 
 config = configparser.ConfigParser()
