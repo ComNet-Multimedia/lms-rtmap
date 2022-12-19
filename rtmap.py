@@ -32,8 +32,7 @@ if db_host == "''":
 # DB connect
 conn = psycopg2.connect(host=db_host, dbname=db_name, user=db_user, password=db_password)
 
-# Creating map
-map = folium.Map(location=[51.268056994984995, 18.37092884412042], zoom_start=11)
+
 
 while True:
 
@@ -55,6 +54,8 @@ while True:
             iteracja = 0
         print ("Liczba nowych zgłoszeń: "+count+", liczba zgłoszeń z poprzedniej iteracji: "+countOld)
         if count != countOld:
+            # Creating map
+            map = folium.Map(location=[51.268056994984995, 18.37092884412042], zoom_start=11)
             # Zapytanie SQL do wybrania współrzędnych geograficznych
             query = """
                 SELECT n.latitude, n.longitude, t.subject, t.queueid, t.id
