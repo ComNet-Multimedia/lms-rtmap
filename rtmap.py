@@ -21,7 +21,6 @@ db_host = config['database']['host']
 db_user = config['database']['user']
 db_password = config['database']['password']
 db_name = config['database']['database']
-queueid_list = [1000001, 2000026, 2000030, 2000042, 2000035, 2000031, 2000033]
 count=0
 countOld=0
 iteracja=0
